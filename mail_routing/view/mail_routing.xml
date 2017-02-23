@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        ##############################################################################
+        #
+        #    mail_routing module for OpenERP, Mail routing
+        #    Copyright (C) 2016 MIROUNGA ([http://www.mirounga.fr/]) 
+        #              Christophe CHAUVET [christophe.chauvet@gmail.com]
+        #
+        #    This file is a part of mail_routing
+        #
+        #    mail_routing is free software: you can redistribute it and/or modify
+        #    it under the terms of the GNU Affero General Public License as published by
+        #    the Free Software Foundation, either version 3 of the License, or
+        #    (at your option) any later version.
+        #
+        #    mail_routing is distributed in the hope that it will be useful,
+        #    but WITHOUT ANY WARRANTY; without even the implied warranty of
+        #    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+        #    GNU Affero General Public License for more details.
+        #
+        #    You should have received a copy of the GNU Affero General Public License
+        #    along with this program.  If not, see [http://www.gnu.org/licenses/].
+        #
+        ##############################################################################
+
+        <record id="view_mail_incoming_queue_tree" model="ir.ui.view">
+            <field name="name">mail.incoming.queue.tree</field>
+            <field name="model">mail.incoming.queue</field>
+            <field name="type">tree</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <tree string="Queues">
+                    <field name="email_from"/>
+                    <field name="email_to"/>
+                    <field name="email_subject"/>
+                    <field name="email_date"/>
+                    <field name="email_count_attachments"/>
+                    <button string="Accept" icon="gtk-ok" type="object" name="accept_mail"/>
+                    <field name="status"/>
+                    <button string="Cancel" icon="gtk-cancel" type="object" name="delete_mail"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_mail_incoming_queue_form" model="ir.ui.view">
+            <field name="name">mail.incoming.queue.form</field>
+            <field name="model">mail.incoming.queue</field>
+            <field name="type">form</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="Queues" version="7.0">
+                    <group colspan="4">
+                        <group colspan="4">
+                            <field name="message"/>
+                            <field name="email_from"/>
+                            <field name="email_to"/>
+                            <field name="email_subject"/>
+                            <field name="email_date"/>
+                            <field name="email_count_attachments"/>
+                            <field name="status"/>
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_mail_incoming_queue_search" model="ir.ui.view">
+            <field name="name">mail.incoming.queue.search</field>
+            <field name="model">mail.incoming.queue</field>
+            <field name="type">search</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <search string="Queues">
+                    <field name="message"/>
+                    <field name="email_subject"/>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="act_open_mail_incoming_queue_view">
+            <field name="name">Queues</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">mail.incoming.queue</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_mail_incoming_queue_search"/>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_open_mail_incoming_queue_view_form">
+            <field name="act_window_id" ref="act_open_mail_incoming_queue_view"/>
+            <field name="sequence" eval="20"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_mail_incoming_queue_form"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_open_mail_incoming_queue_view_tree">
+            <field name="act_window_id" ref="act_open_mail_incoming_queue_view"/>
+            <field name="sequence" eval="10"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_mail_incoming_queue_tree"/>
+        </record>
+
+        <menuitem id="menu_mail_incoming_queue"
+            parent="base.menu_email"
+            sequence="20"
+            action="act_open_mail_incoming_queue_view"/>
+
+        <menuitem id="menu_mail_incoming_queue_mess"
+            parent="mail.mail_feeds"
+            sequence="20"
+            action="act_open_mail_incoming_queue_view"/>
+
+    </data>
+</openerp>

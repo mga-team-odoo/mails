@@ -1,0 +1,125 @@
+Delivered-To: christophe.chauvet@domain.local
+Received: by 10.25.163.1 with SMTP id m1csp2687255lfe;
+        Wed, 8 Feb 2017 09:10:29 -0800 (PST)
+X-Received: by 10.107.40.149 with SMTP id o143mr9554941ioo.30.1486573829266;
+        Wed, 08 Feb 2017 09:10:29 -0800 (PST)
+Return-Path: <bounces+848413-5ee7-christophe.chauvet=domain.local@sgmail.github.com>
+Received: from o6.sgmail.github.com (o6.sgmail.github.com. [192.254.113.101])
+        by mx.google.com with ESMTPS id v1si2275325itb.117.2017.02.08.09.10.28
+        for <christophe.chauvet@domain.local>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 08 Feb 2017 09:10:29 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounces+848413-5ee7-christophe.chauvet=domain.local@sgmail.github.com designates 192.254.113.101 as permitted sender) client-ip=192.254.113.101;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@github.com;
+       dkim=pass header.i=@sendgrid.info;
+       spf=pass (google.com: domain of bounces+848413-5ee7-christophe.chauvet=domain.local@sgmail.github.com designates 192.254.113.101 as permitted sender) smtp.mailfrom=bounces+848413-5ee7-christophe.chauvet=domain.local@sgmail.github.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=github.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; d=github.com; 
+	h=from:reply-to:to:cc:in-reply-to:references:subject:mime-version:content-type:content-transfer-encoding:list-id:list-archive:list-post:list-unsubscribe; 
+	s=s20150108; bh=ck1Fega2ILSo8Mh79jU/TMGxCKc=; b=TD8zszZNRFhHew2U
+	3WqsBzKDmsTpfB/CEs8xBLiWrjtVkrckXlAa+ipdHxAEgh3pgV/by326oO42sD5X
+	K1vYr5kWt/qDiFWz80wgj3KlX/OmFCc2ICwObxN1JQ64frAkaOboFQ9P5UX8WzdZ
+	9PMMA8/lKFhmZFl8nLtlcqoKz8o=
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; d=sendgrid.info; 
+	h=from:reply-to:to:cc:in-reply-to:references:subject:mime-version:content-type:content-transfer-encoding:list-id:list-archive:list-post:list-unsubscribe:x-feedback-id; 
+	s=smtpapi; bh=ck1Fega2ILSo8Mh79jU/TMGxCKc=; b=kacAP6enra9KdeAcTZ
+	hR15sRTqEQivrlMWUREv2KDWCCnw0w8ufQEFd/gAprr2yOhDF9CEBirq7utmlHWa
+	imAdFUXL8DOMa6qzC+v4S1YNZKFF/2pypsoFCnJdihV0/9W+0IB0SpUEM1i3QHhV
+	P1JfP7IEQR/78LVbU3jpEdr0Y=
+Received: by filter1074p1mdw1.sendgrid.net with SMTP id filter1074p1mdw1-11348-589B5104-56
+        2017-02-08 17:10:28.350665002 +0000 UTC
+Received: from github-smtp2b-ext-cp1-prd.iad.github.net (github-smtp2b-ext-cp1-prd.iad.github.net [192.30.253.17])
+	by ismtpd0005p1iad1.sendgrid.net (SG) with ESMTP id isv7mdSuQXSIqWwYrE4dhg
+	for <christophe.chauvet@domain.local>; Wed, 08 Feb 2017 17:10:28.306 +0000 (UTC)
+Date: Wed, 08 Feb 2017 09:10:28 -0800
+From: Rafael Blasco <notifications@github.com>
+Reply-To: OCA/social <reply+000527b2968bff48c11782b220e2e98d056cfd9bab913d7692cf0000000114b3130492a169ce0c4a8bb0@reply.github.local>
+To: OCA/social <social@noreply.github.com>
+Cc: Subscribed <subscribed@noreply.github.com>
+Message-ID: <OCA/social/pull/152/review/20813852@github.com>
+In-Reply-To: <OCA/social/pull/152@github.com>
+References: <OCA/social/pull/152@github.com>
+Subject: Re: [OCA/social] [9.0][IMP] mail_tracking: Improve view with error
+ details (#152)
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_589b510420f99_74ee3fe83e73d140271490";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+Precedence: list
+X-GitHub-Sender: rafaelbn
+X-GitHub-Recipient: kryskool
+X-GitHub-Reason: subscribed
+List-ID: OCA/social <social.OCA.github.com>
+List-Archive: https://github.com/OCA/social
+List-Post: <mailto:reply+000527b2968bff48c11782b220e2e98d056cfd9bab913d7692cf0000000114b3130492a169ce0c4a8bb0@reply.github.local>
+List-Unsubscribe: <mailto:unsub+000527b2968bff48c11782b220e2e98d056cfd9bab913d7692cf0000000114b3130492a169ce0c4a8bb0@reply.github.local>,
+ <https://github.com/notifications/unsubscribe/AAUnsjMLYPmM6nJ3SjOuiaS5B0rYcpYXks5rafcEgaJpZM4L64P4>
+X-Auto-Response-Suppress: All
+X-GitHub-Recipient-Address: christophe.chauvet@domain.local
+X-SG-EID: PJcTTWxuyNxY1aEtltGxOv+BCtb7N3WOiq5UBWGTbHGEPFXMrqtkaat6z0wMYvWtuv8y54OR3Cgqs5
+ lAXgcRJFO6E1DrEzUVzcET6wymFEmZ4T9rxAZyzrRF5WXryqtrB0VHGF/Q2BWLHkrFL/0zKYDk0Hn7
+ Zch3ODTEaYvzs/7MBDRQQBHmv9LLHjO4SsdAA+4eOOQtPOG9N9wrB4mcibJCKr+4LoKnBwNMaJIpVp
+ s=
+X-Feedback-ID: 848413:6xvVEJqleZlAW7/vhv7PzD/cv5tamo2SWZDKyvugGvg=:6xvVEJqleZlAW7/vhv7PzD/cv5tamo2SWZDKyvugGvg=:SG
+
+----==_mimepart_589b510420f99_74ee3fe83e73d140271490
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+rafaelbn approved this pull request.
+
+Thanks! tested =F0=9F=91=8D=20
+
+
+
+--=20
+You are receiving this because you are subscribed to this thread.
+Reply to this email directly or view it on GitHub:
+https://github.com/OCA/social/pull/152#pullrequestreview-20813852=
+
+----==_mimepart_589b510420f99_74ee3fe83e73d140271490
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<p><b>@rafaelbn</b> approved this pull request.</p>
+
+<p>Thanks! tested <g-emoji alias=3D"+1" fallback-src=3D"https://assets-cdn.=
+github.com/images/icons/emoji/unicode/1f44d.png" ios-version=3D"6.0">=F0=9F=
+=91=8D</g-emoji></p>
+
+<p style=3D"font-size:small;-webkit-text-size-adjust:none;color:#666;">&mda=
+sh;<br />You are receiving this because you are subscribed to this thread.<=
+br />Reply to this email directly, <a href=3D"https://github.com/OCA/social=
+/pull/152#pullrequestreview-20813852">view it on GitHub</a>, or <a href=3D"=
+https://github.com/notifications/unsubscribe-auth/AAUnsuSUCTbfVbS6_-_dYszku=
+PQiBenLks5rafcEgaJpZM4L64P4">mute the thread</a>.<img alt=3D"" height=3D"1"=
+ src=3D"https://github.com/notifications/beacon/AAUnspPhezRTVI5OSGJVZeBuOqc=
+GGjhyks5rafcEgaJpZM4L64P4.gif" width=3D"1" /></p>
+<div itemscope itemtype=3D"http://schema.org/EmailMessage">
+<div itemprop=3D"action" itemscope itemtype=3D"http://schema.org/ViewAction=
+">
+  <link itemprop=3D"url" href=3D"https://github.com/OCA/social/pull/152#pul=
+lrequestreview-20813852"></link>
+  <meta itemprop=3D"name" content=3D"View Pull Request"></meta>
+</div>
+<meta itemprop=3D"description" content=3D"View this Pull Request on GitHub"=
+></meta>
+</div>
+
+<script type=3D"application/json" data-scope=3D"inboxmarkup">{"api_version"=
+:"1.0","publisher":{"api_key":"05dde50f1d1a384dd78767c55493e4bb","name":"Gi=
+tHub"},"entity":{"external_key":"github/OCA/social","title":"OCA/social","s=
+ubtitle":"GitHub repository","main_image_url":"https://cloud.githubusercont=
+ent.com/assets/143418/17495839/a5054eac-5d88-11e6-95fc-7290892c7bb5.png","a=
+vatar_image_url":"https://cloud.githubusercontent.com/assets/143418/1584216=
+6/7c72db34-2c0b-11e6-9aed-b52498112777.png","action":{"name":"Open in GitHu=
+b","url":"https://github.com/OCA/social"}},"updates":{"snippets":[{"icon":"=
+PERSON","message":"@rafaelbn approved #152"}],"action":{"name":"View Pull R=
+equest","url":"https://github.com/OCA/social/pull/152#pullrequestreview-208=
+13852"}}}</script>=
+
+----==_mimepart_589b510420f99_74ee3fe83e73d140271490--

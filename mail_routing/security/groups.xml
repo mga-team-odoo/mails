@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <record id="group_mail_routing_manager" model="res.groups">
+            <field name="name">Mail routing manager</field>
+        </record>
+
+    </data>
+</openerp>

@@ -1,0 +1,101 @@
+Delivered-To: christophe.chauvet@domain.local
+Received: by 10.25.163.1 with SMTP id m1csp2674614lfe;
+        Wed, 8 Feb 2017 08:40:48 -0800 (PST)
+X-Received: by 10.36.57.10 with SMTP id l10mr18058884ita.8.1486572048217;
+        Wed, 08 Feb 2017 08:40:48 -0800 (PST)
+Return-Path: <bounces+848413-5ee7-christophe.chauvet=domain.local@sgmail.github.com>
+Received: from o8.sgmail.github.com (o8.sgmail.github.com. [167.89.101.199])
+        by mx.google.com with ESMTPS id o71si2201307ito.126.2017.02.08.08.40.47
+        for <christophe.chauvet@domain.local>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 08 Feb 2017 08:40:48 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounces+848413-5ee7-christophe.chauvet=domain.local@sgmail.github.com designates 167.89.101.199 as permitted sender) client-ip=167.89.101.199;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@github.com;
+       dkim=pass header.i=@sendgrid.info;
+       spf=pass (google.com: domain of bounces+848413-5ee7-christophe.chauvet=domain.local@sgmail.github.com designates 167.89.101.199 as permitted sender) smtp.mailfrom=bounces+848413-5ee7-christophe.chauvet=domain.local@sgmail.github.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=github.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; d=github.com; 
+	h=from:reply-to:to:cc:in-reply-to:references:subject:mime-version:content-type:content-transfer-encoding:list-id:list-archive:list-post:list-unsubscribe; 
+	s=s20150108; bh=neGmYiAB8dCQ5uRFuR17p9lwCAQ=; b=YpxcT8kktb2EJAqd
+	Tu/GW1fpKe4lzVt+6BHd13ySHb4R/GHkosZrN77K1DvlJTRVDEbXvDkh5OhDzhwe
+	1U0EUAvD5ZKvdalN47fGmDlca2llkJak60Lt641xzmlLpdcmyFFMAIgkJ9XOqHJX
+	DDNSUHgJIlZ9+XhJ8S4gSihEgEE=
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; d=sendgrid.info; 
+	h=from:reply-to:to:cc:in-reply-to:references:subject:mime-version:content-type:content-transfer-encoding:list-id:list-archive:list-post:list-unsubscribe:x-feedback-id; 
+	s=smtpapi; bh=neGmYiAB8dCQ5uRFuR17p9lwCAQ=; b=KaPlnbKqw4H31P3qGQ
+	WKVce6BscMZd4wGg7OfcwHTWWslNvEts/jhHZvjwazhsyu1F9jK0lJEpYNcAwiad
+	1iH3zXRCVLgnMXhKfTXaiZc7gJKIUtTZgL7KPjb/dyK5BqrX6BiuD9UfbJK/p+QE
+	juwhqvqftELPrlMgHW0pPvx8g=
+Received: by filter0922p1mdw1.sendgrid.net with SMTP id filter0922p1mdw1-5194-589B4A0E-2A
+        2017-02-08 16:40:46.949944596 +0000 UTC
+Received: from github-smtp2a-ext-cp1-prd.iad.github.net (github-smtp2a-ext-cp1-prd.iad.github.net [192.30.253.16])
+	by ismtpd0002p1iad1.sendgrid.net (SG) with ESMTP id XzPRV81BQ7q8p9Ox5Mfxzw
+	for <christophe.chauvet@domain.local>; Wed, 08 Feb 2017 16:40:46.923 +0000 (UTC)
+Date: Wed, 08 Feb 2017 08:40:46 -0800
+From: "Pedro M. Baeza" <notifications@github.com>
+Reply-To: OCA/social <reply+000527b2337253bf3a94b85a6206c830ffa7f717bb696d3192cf0000000114b30c0e92a169ce0c4a8bb0@reply.github.local>
+To: OCA/social <social@noreply.github.com>
+Cc: Subscribed <subscribed@noreply.github.com>
+Message-ID: <OCA/social/pull/152/review/20806402@github.com>
+In-Reply-To: <OCA/social/pull/152@github.com>
+References: <OCA/social/pull/152@github.com>
+Subject: Re: [OCA/social] [9.0][IMP] mail_tracking: Improve view with error
+ details (#152)
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_589b4a0ec092d_3ada3fc5296331382444e6";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+Precedence: list
+X-GitHub-Sender: pedrobaeza
+X-GitHub-Recipient: kryskool
+X-GitHub-Reason: subscribed
+List-ID: OCA/social <social.OCA.github.com>
+List-Archive: https://github.com/OCA/social
+List-Post: <mailto:reply+000527b2337253bf3a94b85a6206c830ffa7f717bb696d3192cf0000000114b30c0e92a169ce0c4a8bb0@reply.github.local>
+List-Unsubscribe: <mailto:unsub+000527b2337253bf3a94b85a6206c830ffa7f717bb696d3192cf0000000114b30c0e92a169ce0c4a8bb0@reply.github.local>,
+ <https://github.com/notifications/unsubscribe/AAUnshKioeafFOa1WAE6Zwa3_bVbLaSEks5rafAOgaJpZM4L64P4>
+X-Auto-Response-Suppress: All
+X-GitHub-Recipient-Address: christophe.chauvet@domain.local
+X-SG-EID: PJcTTWxuyNxY1aEtltGxOv+BCtb7N3WOiq5UBWGTbHFCfBrfIA4Ky2R0m+8yyacoKDaa7Ds5qaOx9N
+ wUrFgk1+YIvEN1aYso6byPIIk3CTTJjmCIEpsFUihFRP36NPo4GOsfLD9F5/bOR1ytBbMpYnDuoLY1
+ xfcTvkJrEZug2lFxB0EUDCu6P8i7hw6wfZ5ijShLq/ashhEsDfnFKV7y4SysG0RuIapRrAFA2xK+ER
+ 6gIGi/2OJ9nNrcK3if+ss9
+X-Feedback-ID: 848413:6xvVEJqleZlAW7/vhv7PzD/cv5tamo2SWZDKyvugGvg=:6xvVEJqleZlAW7/vhv7PzD/cv5tamo2SWZDKyvugGvg=:SG
+
+----==_mimepart_589b4a0ec092d_3ada3fc5296331382444e6
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+pedrobaeza approved this pull request.
+
+
+
+
+
+-- 
+You are receiving this because you are subscribed to this thread.
+Reply to this email directly or view it on GitHub:
+https://github.com/OCA/social/pull/152#pullrequestreview-20806402
+----==_mimepart_589b4a0ec092d_3ada3fc5296331382444e6
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p><b>@pedrobaeza</b> approved this pull request.</p>
+
+
+
+<p style="font-size:small;-webkit-text-size-adjust:none;color:#666;">&mdash;<br />You are receiving this because you are subscribed to this thread.<br />Reply to this email directly, <a href="https://github.com/OCA/social/pull/152#pullrequestreview-20806402">view it on GitHub</a>, or <a href="https://github.com/notifications/unsubscribe-auth/AAUnsjdxfXAi-oTIGQbgddy8e-6PNMPEks5rafAOgaJpZM4L64P4">mute the thread</a>.<img alt="" height="1" src="https://github.com/notifications/beacon/AAUnssxbRj1YjRhACN68SX7fjurw5dZNks5rafAOgaJpZM4L64P4.gif" width="1" /></p>
+<div itemscope itemtype="http://schema.org/EmailMessage">
+<div itemprop="action" itemscope itemtype="http://schema.org/ViewAction">
+  <link itemprop="url" href="https://github.com/OCA/social/pull/152#pullrequestreview-20806402"></link>
+  <meta itemprop="name" content="View Pull Request"></meta>
+</div>
+<meta itemprop="description" content="View this Pull Request on GitHub"></meta>
+</div>
+
+<script type="application/json" data-scope="inboxmarkup">{"api_version":"1.0","publisher":{"api_key":"05dde50f1d1a384dd78767c55493e4bb","name":"GitHub"},"entity":{"external_key":"github/OCA/social","title":"OCA/social","subtitle":"GitHub repository","main_image_url":"https://cloud.githubusercontent.com/assets/143418/17495839/a5054eac-5d88-11e6-95fc-7290892c7bb5.png","avatar_image_url":"https://cloud.githubusercontent.com/assets/143418/15842166/7c72db34-2c0b-11e6-9aed-b52498112777.png","action":{"name":"Open in GitHub","url":"https://github.com/OCA/social"}},"updates":{"snippets":[{"icon":"PERSON","message":"@pedrobaeza approved #152"}],"action":{"name":"View Pull Request","url":"https://github.com/OCA/social/pull/152#pullrequestreview-20806402"}}}</script>
+----==_mimepart_589b4a0ec092d_3ada3fc5296331382444e6--
