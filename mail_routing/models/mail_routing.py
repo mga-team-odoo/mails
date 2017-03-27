@@ -76,7 +76,7 @@ class MailIncomingQueue(models.Model):
         mails_from = re.findall(r"<[^>]+>", msg_txt.get('From'))
         part_obj = self.env['res.partner']
         for m in mails_from:
-            p_ids = part_obj.search([('email', '=', m)])
+            p_ids = part_obj.search([('email', '=', self.clean_ref(m))])
             if p_ids:
                 self.env['mail.thread'].message_process(model, message)
                 return True

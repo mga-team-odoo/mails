@@ -246,3 +246,6 @@ class TestMailgateway(TestMailGW):
         res = self.mail_inqueue.message_queue(
             cr, uid, 'res.partner', open_mail('mail_known_partner.eml'))
         self.assertTrue(res, 'Mail is known, direct delivery')
+        res = self.mail_inqueue.message_queue(
+            cr, uid, 'res.partner', open_mail('mail_known_partner2.eml'))
+        self.assertTrue(res, 'Mail is known Name+mail, direct delivery')
