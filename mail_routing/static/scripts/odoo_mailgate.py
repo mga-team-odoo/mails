@@ -97,11 +97,8 @@ class RPCProxy(object):
         self.dbname = dbname
 
     def __call__(self, *request, **kwargs):
-        try:
-            return self.rpc.execute(self.dbname, self.user_id, self.passwd,
-                                    *request, **kwargs)
-        except Exception:
-            sys.exit(75)
+        return self.rpc.execute(self.dbname, self.user_id, self.passwd,
+                                *request, **kwargs)
 
 
 class EmailParser(object):
@@ -198,6 +195,7 @@ def main():
     try:
         email_parser.parse(msg_txt, custom_values,
                            options.save_original or False)
+        sys.exit(0)
     except Exception:
         msg = '\n'.join([
             'parameters',
@@ -217,8 +215,7 @@ def main():
         )
         sys.stderr.write("Failed to deliver email to Odoo Server, sending"
                          " error notification to %s\n" % config.MAIL_ADMINS)
-        sys.exit(0)
-
+        sys.exit(75)
 
 if __name__ == '__main__':
     main()
