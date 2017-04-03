@@ -30,7 +30,8 @@
             <field name="type">tree</field>
             <field name="priority" eval="8"/>
             <field name="arch" type="xml">
-                <tree string="Queues">
+                <tree string="Queues"
+                    colors="gray:status=='unsubscribe'">
                     <field name="email_from"/>
                     <field name="email_to"/>
                     <field name="email_subject"/>
