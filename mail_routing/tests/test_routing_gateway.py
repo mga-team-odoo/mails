@@ -270,3 +270,13 @@ class TestMailgateway(TestMailGW):
             res = self.mail_inqueue.message_queue(
                 cr, uid, 'res.partner', open_mail('mailing3.eml'))
             res.unsubscribe()
+
+    def test_70_check_spam(self):
+        """ Check if header flag is YES """
+        cr, uid = self.cr, self.uid
+        res = self.mail_inqueue.message_queue(
+            cr, uid, 'res.partner', open_mail('spam1.eml'))
+        self.assertEqual(res.status, 'spam', 'file spam1.eml ')
+        res = self.mail_inqueue.message_queue(
+            cr, uid, 'res.partner', open_mail('spam2.eml'))
+        self.assertEqual(res.status, 'mailing', 'file spam2.eml ')
