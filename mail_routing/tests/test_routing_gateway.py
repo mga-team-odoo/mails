@@ -249,3 +249,11 @@ class TestMailgateway(TestMailGW):
         res = self.mail_inqueue.message_queue(
             cr, uid, 'res.partner', open_mail('mail_known_partner2.eml'))
         self.assertTrue(res, 'Mail is known Name+mail, direct delivery')
+
+    def test_50_unsubscribe_mailing(self):
+        """ Unsubscribe from mailing """
+        cr, uid = self.cr, self.uid
+        res = self.mail_inqueue.message_queue(
+            cr, uid, 'res.partner', open_mail('mailing1.eml'))
+        self.assertTrue(res.unsubscribe(), 'Unsubscribe message 1 failed !!')
+
