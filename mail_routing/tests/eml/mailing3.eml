@@ -1,0 +1,311 @@
+Received: from smtp3.example.com (smtp3.example.com [185.16.48.60])
+	by erp.example.com (Postfix) with ESMTPS id D65C7A251F
+	for <commercial@erp.example.com>; Mon,  3 Apr 2017 10:08:48 +0200 (CEST)
+Authentication-Results: erp.example.com; dkim=pass
+	reason="1024-bit key; unprotected key"
+	header.d=1s6.memberemail.com header.i=@1s6.memberemail.com
+	header.b=eUydK0rK; dkim-adsp=none (unprotected policy);
+	dkim-atps=neutral
+Received: from mail.example.com (mail.example.com [185.16.48.58])
+	by smtp3.example.com (Postfix) with ESMTPS id 7ABBB40710
+	for <commercial@erp.example.com>; Mon,  3 Apr 2017 10:08:46 +0200 (CEST)
+Authentication-Results: smtp3.example.com; dkim=pass
+	reason="1024-bit key; insecure key"
+	header.d=1s6.memberemail.com header.i=@1s6.memberemail.com
+	header.b=eUydK0rK; dkim-adsp=none (insecure policy);
+	dkim-atps=neutral
+Received: from localhost (localhost [127.0.0.1])
+	by mail.example.com (Postfix) with ESMTP id 69B58105A73;
+	Mon,  3 Apr 2017 10:08:46 +0200 (CEST)
+X-Spam-Flag: NO
+X-Spam-Score: -1.897
+X-Spam-Level:
+X-Spam-Status: No, score=-1.897 tagged_above=-10 required=6.6
+	tests=[BAYES_00=-1.9, DKIM_SIGNED=0.1, DKIM_VALID=-0.1,
+	HEADER_FROM_DIFFERENT_DOMAINS=0.001, HTML_IMAGE_RATIO_08=0.001,
+	HTML_MESSAGE=0.001] autolearn=ham autolearn_force=no
+Authentication-Results: mail.example.com (amavisd-new);
+	dkim=pass (1024-bit key) header.d=1s6.memberemail.com
+Received: from mail.example.com ([127.0.0.1])
+	by localhost (mail.example.com [127.0.0.1]) (amavisd-new, port 10032)
+	with ESMTP id EP8Jm1Pljyq5; Mon,  3 Apr 2017 10:08:37 +0200 (CEST)
+Received: from localhost (localhost [127.0.0.1])
+	by mail.example.com (Postfix) with ESMTP id B8FA9105A74;
+	Mon,  3 Apr 2017 10:08:37 +0200 (CEST)
+X-Virus-Scanned: amavisd-new at exemple.local
+Received: from mail.example.com ([127.0.0.1])
+	by localhost (mail.example.com [127.0.0.1]) (amavisd-new, port 10026)
+	with ESMTP id 4G6y1li9SIJg; Mon,  3 Apr 2017 10:08:37 +0200 (CEST)
+Received: from smtp.example.com (smtp.example.com [185.16.48.59])
+	by mail.example.com (Postfix) with ESMTP id 5A977105A73
+	for <commercial@example.com>; Mon,  3 Apr 2017 10:08:37 +0200 (CEST)
+Received: from ba1.mta.exacttarget.com (ba1.mta.exacttarget.com [68.232.200.1])
+	by smtp.example.com (Postfix) with ESMTPS id 849304005F
+	for <commercial@example.com>; Mon,  3 Apr 2017 10:08:36 +0200 (CEST)
+Authentication-Results: smtp.example.com; dkim=pass
+	reason="1024-bit key; insecure key"
+	header.d=1s6.memberemail.com header.i=@1s6.memberemail.com
+	header.b=eUydK0rK; dkim-adsp=none (insecure policy);
+	dkim-atps=neutral
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=20120420; d=1s6.memberemail.com;
+ h=From:To:Subject:Date:List-Unsubscribe:MIME-Version:List-ID:Message-ID:Content-Type;
+ bh=oBFdhMO61GbYMQm0cKsUHq0k8NQ=;
+ b=eUydK0rKmPYRkmS+hgAPH1CIY7wc2yt1B7PCG4oul4P2SxBl7JGjpV1QidLAhau4dNnrOssWHFfg
+   hr9OOwdxduFhN+wzcjU/yEPUrOXGF8a/Leta+9hPvoR6F8wuuPxJaq46KR5mF/TH5ROuLBITX6P7
+   3BbRPvY1Ujz9M1XMngg=
+Received: by ba1.mta.exacttarget.com id hs81g8163hsl for <commercial@example.com>; Mon, 3 Apr 2017 02:07:58 -0600 (envelope-from <bounce-638_HTML-20166885-3937955-6414842-6@bounce.s6.exacttarget.com>)
+From: "Tech Data France" <news@techdata.fr>
+To: <commercial@example.com>
+Subject: =?ISO-8859-1?Q?Participez_=E0_l'=E9tude_CONTEXT_ChannelWatch_2017?=
+ =?ISO-8859-1?Q?_et_tentez_de_gagner_un_iPad_mini?=
+Date: Mon, 03 Apr 2017 02:07:58 -0600
+List-Unsubscribe: <http://mailing.example.com/unsubscribe>
+MIME-Version: 1.0
+List-ID: <6414842_3937955.xt.local>
+X-CSA-Complaints: whitelistcomplaints@eco.de
+x-job: 6414842_3937955
+Message-ID: <2656ae80-aa0a-4f01-8d19-c8a2075d04b8@xtinp2mta145.xt.local>
+Content-Type: multipart/alternative;
+	boundary="UDCwVtr677rt=_?:"
+
+This is a multi-part message in MIME format.
+
+--UDCwVtr677rt=_?:
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: 7bit
+
+Si vous ne visualisez pas correctement ce message, cliquez 
+http://cl.s6.exct.net/?qs=aaaa692625e57ae32b25de8e8be4de6ca428ab5da0ca36467e5139a6d4619662b78ff2f75b27658e39e25934a2fc0bf3419a959a60e1f9ef 
+ici E-mailing Tech Data France
+
+  Cher revendeur,  Nous sommes heureux de vous inviter a participer a l'etude CONTEXT ChannelWatch 2017.  
+Qu'est-ce-que l'etude CONTEXT ChannelWatch?
+
+L'etude CONTEXT ChannelWatch est une etude annuelle a completer en ligne qui permet de recueillir l'opinion des revendeurs informatiques en Europe et qui permet ainsi de mieux cerner leurs besoins et de capturer les tendances du marche. Cette etude est la plus large existante aupres des revendeurs informatiques en Europe.
+ Pourquoi devrais-je participer?
+Grossistes et fournisseurs ont acces aux resultats de cette etude. Elle constitue votre opportunite de leur faire savoir ce que vous pensez de leurs offres et de leurs prestations en partageant votre opinion sur des questions cles et sur les opportunites offertes par la distribution.
+
+L'etude prendra moins de 10 minutes.
+ 
+http://cl.s6.exct.net/?qs=aaaa692625e57ae36db75a89a5aacd4c513a901a983e366826b6eb51547eb777f4ab8bcdd02ac3a91211760f7a387e3474404dc1ffcdebd5 
+  Comment les donnees seront-elles utilisees? Toutes les reponses seront traitees de maniere confidentielle et les resultats seront utilises pour creer des rapports a partir de donnees agregees. Votre vote determinera le Grossiste de l'annee 2016. Le nom des gagnants sera publie a la fin du deuxieme trimestre 2017. Nous vous remercions par avance pour votre participation. Bien cordialement, L'equipe CONTEXT   *Termes et conditions: Pour etre admissible, vous devez travailler pour un revendeur informatique base dans la region EMEA, le Bresil, la Nouvelle-Zelande ou l'Australie. 1 gagnant par mois.
+CONTEXT, Dial House, 2 Burston Road, London SW15 6AR, United Kingdom
+
+http://cl.s6.exct.net/?qs=aaaa692625e57ae358d48ae2dcbe3c441cca75ab61d6cb4f4e00dc917a823b5fcbe60f2fc5296634972f174c548ea05a6369d22422d6a822 
+contextworld.com 
+http://cl.s6.exct.net/?qs=aaaa692625e57ae3fdbb56bbd30a85144ec153d80740954139b1b955e996f480863adfe10223292c33938a12bbd52dd9129521f0f65f74b9 
+ 
+http://cl.s6.exct.net/?qs=aaaa692625e57ae3383519ffdaa6749b49c75d406d0f7dfefd6c07998bdcac5a742e600d07df1c735296c46a581b1a195a1a6266b5aeab5c 
+ 
+http://cl.s6.exct.net/?qs=aaaa692625e57ae3b0ef53fd87c6028f8b1e1bb9c595b9c6ca5303c936cc82b49cd87b7a69dc616cf902255c0ffcfbb3dbb5d6cedf78dbab 
+
+http://cl.s6.exct.net/?qs=aaaa692625e57ae3d0c151c5d53ef1fa59f16a3c6f5c26b47685d9d58dadca0bf53a8d9bae4c23451336bf3fb5bb603b2634038983a4274d 
+  
+
+http://cl.s6.exct.net/?qs=aaaa692625e57ae3b4306ea04cd4d4a1fa2d03a275200476e458390e7d800d5cb0b4e0c07a51f3b0daf9004d389dd9addd1973fbd4e4463c 
+
+http://cl.s6.exct.net/?qs=aaaa692625e57ae3d088da962fe9a9985361cba8788458ecd0e74d18ddf0c9cb261782f62d45bc45e4a056923df46e7a6f412a1111f813bb 
+
+http://cl.s6.exct.net/?qs=aaaa692625e57ae353560eebff7d5ab91ed1b18fe206b928d0f91222376681c08f4d6d01b345c04919ceda101c8d88c52406a08896d32106 
+
+http://cl.s6.exct.net/?qs=aaaa692625e57ae32fcd1f4273ef76a0cb88c22f7e668665babab320bf54299eae00b31c366c13f1674b9fb06bcaa82915408b70900b6ed8 
+
+http://cl.s6.exct.net/?qs=aaaa692625e57ae3f434af36e931e38b3ae1d1819ac3abf8861f18e418edaba7affa4a8c4dd96bdc5051700c86b82b126761d34c0a54c6d7 
+
+http://cl.s6.exct.net/?qs=aaaa692625e57ae32c051e84c741da28bbacd0f7d53ebba6bac65f4a7eafb6e8b65134f6dfb122ce0a3b4dfba3144bb68560579fbdee403e 
+
+http://cl.s6.exct.net/?qs=aaaa692625e57ae37d84dc101843280baee0e8162d97119d6a2e97d1b82e4127173a6f628697cea1cf8c55a4b9c8da4f7ca92ffaad274b6d 
+
+http://cl.s6.exct.net/?qs=aaaa692625e57ae3817a427a57dec1b1c957614970c663d8a4da2aa0fae2a86784b183f720e767c7bafe81e2c0ca85d5f30d25051efc5fac 
+
+Ce message vous est adresse parce que vous etes abonne a notre liste de diffusion.
+
+Pour vous desabonner de nos listes de diffusion : 
+mailto:unsubscribe@techdata.fr?subject=unsubscribe promotions&bcc=mailing@techdata.fr 
+Desabonnement
+
+Toutes interrogations concernant cette liste de diffusion doivent etre adressees a : 
+mailto:mailing@techdata.fr 
+mailing@techdata.fr 
+
+
+Tech Data France
+
+5, avenue de l'Europe Marne La Vallée, Cedex 3, 77611, France
+http://cl.s6.exct.net/?qs=aaaa692625e57ae37995c7b07a4fe18327cb44e47c4bf0aa681f05bc8a9d9853c40ac945075e9ab78ccfb11acd00d3854995ff2e1c65d4be 
+. 
+
+
+
+
+
+--UDCwVtr677rt=_?:
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: 7bit
+
+
+<center>Si vous ne visualisez pas correctement ce message, cliquez <a href="http://cl.s6.exct.net/?qs=aaaa692625e57ae37a0baf908fc09be456ee9432c08817c12d3d30f94c1ccb815fe37ff5765dd23997046b34eff2f40502b804bde7082370">ici</a></center>
+<img src="http://cl.s6.exct.net/open.aspx?ffcb10-fe86177976630d7870-fe5c10777663047e7210-fe92127474600c7977-ff5e12737d-fe5b1670746202757d11-ffc912" width="1" height="1">
+<html>
+<head>
+<title>E-mailing Tech Data France</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<META NAME="robots" CONTENT="noindex,nofollow">
+</head>
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<div align="center">
+<table id="Tableau_01" width="732"  border="0" cellpadding="0" cellspacing="0">
+<tr>
+		<td width="732">
+			<img src="http://media.techdata.fr/000WEB/template_push/header_com.gif" width="730" height="180" alt=""></td>
+  </tr>
+  <tr>
+							  <td width="730" align="center" valign="top"><br>
+
+									<font face="Arial" color="#000000"><title></title>
+<center>
+<table cellpadding="0" cellspacing="0" height="150" id="topTable" width="500">
+	<tbody>
+		<tr valign="top">
+			<td height="300" style="color: rgb(0, 0, 0); font-family: arial, helvetica, sans-serif; font-size: 11pt; background-color: rgb(255, 255, 255);">
+			<div style="color:#575756; font-size:10pt;font-family: Arial, sans-serif;">
+			<div>
+			<div style="text-align: justify;"><img alt="" src="http://media.techdata.fr/000WEB/images/ChannelWatch_Blue.png" style="width: 300px; height: 30px;" /></div>
+
+			<div style="text-align: justify;">&nbsp;</div>
+
+			<div style="text-align: justify;">&nbsp;</div>
+
+			<div style="text-align: justify;"><span style="font-size:11pt;"><span style="font-family:arial;">Cher revendeur,</span></span></div>
+
+			<div style="border-bottom: 1px solid rgb(227, 226, 47); text-align: justify;">&nbsp;</div>
+
+			<div style="text-align: justify;">&nbsp;</div>
+
+			<div style="text-align: justify;"><span style="font-size:11pt;">Nous sommes heureux de vous inviter &agrave; participer &agrave; l'&eacute;tude CONTEXT ChannelWatch 2017. </span></div>
+
+			<div style="text-align: justify;">&nbsp;</div>
+
+			<p style="text-align: justify;"><span style="font-family:arial;"><strong><span style="font-size: 11pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">Qu'est-ce-que l'&eacute;tude CONTEXT ChannelWatch?</span></strong><br />
+			<br />
+			<span style="font-size: 11pt; color: rgb(87, 87, 86);"><span style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">L'&eacute;tude CONTEXT ChannelWatch est une &eacute;tude annuelle &agrave; compl&eacute;ter en ligne qui permet de recueillir l'opinion des revendeurs informatiques en Europe et qui permet ainsi de mieux cerner leurs besoins et de capturer les tendances du march&eacute;. Cette &eacute;tude est la plus large existante aupr&egrave;s des revendeurs informatiques en Europe.</span></span></span></p>
+
+			<div style="text-align: justify;">&nbsp;</div>
+			</div>
+
+			<div style="text-align: justify;"><span style="font-size:11pt;"><strong>Pourquoi devrais-je participer?</strong></span></div>
+
+			<p style="text-align: justify;"><span style="font-size:11pt;">Grossistes et fournisseurs ont acc&egrave;s aux r&eacute;sultats de cette &eacute;tude. Elle constitue votre opportunit&eacute; de leur faire savoir ce que vous pensez de leurs offres et de leurs prestations en partageant votre opinion sur des questions cl&eacute;s et sur les opportunit&eacute;s offertes par la distribution.</span></p>
+
+			<p style="text-align: justify;"><span style="font-size:11pt;">L'&eacute;tude&nbsp;prendra moins&nbsp;de 10 minutes.</span></p>
+
+			<div style="text-align: justify;">&nbsp;</div>
+
+			<div style="text-align: center;"><span style="font-size:11pt;"><a href="http://cl.s6.exct.net/?qs=aaaa692625e57ae333ef32273108deeef6b314e61b8dec11221f1cead50ce7396444aa843f741917d1baaefbe9f0bcfb55b5d3524af6fd06"><strong><img alt="" src="https://s3-eu-west-1.amazonaws.com/imgpub/Button_FR.png" border="0" style="width: 600px; height: 80px;" /></strong></a></span></div>
+
+			<div style="text-align: justify;">&nbsp;</div>
+
+			<div style="text-align: justify;">&nbsp;</div>
+
+			<div style="text-align: justify;"><span style="font-size:11pt;"><strong>Comment les donn&eacute;es seront-elles utilis&eacute;es?</strong></span></div>
+
+			<div style="text-align: justify;">&nbsp;</div>
+
+			<div style="text-align: justify;"><span style="font-size:11pt;">Toutes les r&eacute;ponses seront trait&eacute;es de mani&egrave;re confidentielle et les r&eacute;sultats seront utilis&eacute;s pour cr&eacute;er des rapports &agrave; partir de donn&eacute;es agr&eacute;g&eacute;es. Votre vote d&eacute;terminera le Grossiste de l'ann&eacute;e 2016. Le nom des gagnants sera publi&eacute; &agrave; la fin du deuxi&egrave;me trimestre 2017.</span></div>
+
+			<div style="text-align: justify;">&nbsp;</div>
+
+			<div style="text-align: justify;"><span style="font-size:11pt;">Nous vous remercions par avance pour votre participation.</span></div>
+
+			<div style="text-align: justify;">&nbsp;</div>
+
+			<div style="text-align: justify;"><span style="font-size:11pt;">Bien cordialement,</span></div>
+
+			<div style="text-align: justify;">&nbsp;</div>
+
+			<div style="text-align: justify;"><span style="font-size:11pt;">L'&eacute;quipe CONTEXT</span></div>
+
+			<div style="text-align: justify;">&nbsp;</div>
+			</div>
+
+			<div style="border-bottom: 1px solid rgb(227, 226, 47); text-align: justify;">&nbsp;</div>
+
+			<div style="text-align: justify;">&nbsp;</div>
+
+			<div style="text-align: justify;"><span style="color:#666666;"><em><span style="font-size:10pt;"><strong>*</strong><strong>Termes et conditions:</strong> Pour &ecirc;tre admissible, vous devez travailler pour un revendeur informatique bas&eacute; dans la r&eacute;gion EMEA, le Br&eacute;sil, la Nouvelle-Z&eacute;lande ou l'Australie. 1 gagnant par mois.</span></em></span></div>
+
+			<p style="text-align: center;"><span style="color:#666666;"><span style="font-size:9pt;">CONTEXT, Dial House, 2 Burston Road, London SW15 6AR, United Kingdom</span></span></p>
+
+			<div style="color:#575756; font-size:10pt;font-family: Arial, sans-serif;">
+			<div style="color: rgb(0, 0, 0); font-family: arial, helvetica, sans-serif; font-size: 14.6667px; text-align: center;"><span style="font-size: 10pt;"><a href="http://cl.s6.exct.net/?qs=aaaa692625e57ae3ea76bf77d0402adb02abf35d20350bbe250813b1b5e756b2c7db3fafe21156a35ec68f6482df8f0e28863f2935278fe1" target="_blank">contextworld.com</a></span></div>
+
+			<div style="color: rgb(0, 0, 0); font-family: arial, helvetica, sans-serif; font-size: 14.6667px; text-align: center;"><a href="http://cl.s6.exct.net/?qs=aaaa692625e57ae3b663bda7cbb7970651dcb96ab51e115b4f8f8bba8da90b137e28098a5abf0eb28ab8a8219f70d059cde71e07c5cb0257" target="_blank"><span style="font-family: Calibri, sans-serif; text-decoration: none;"><img alt="CONTEXT LinkedIn" src="https://s3-eu-west-1.amazonaws.com/imgpub/linkedin.png" border="0" style="width: 22px; height: 22px;" /></span></a><span style="font-family: Calibri, sans-serif;">&nbsp;</span><a href="http://cl.s6.exct.net/?qs=aaaa692625e57ae3a4beea7db26e088592c435cd82f0570d9022877db5f217c10617280b3c6cc0f409290468c9c28e0b887a15cfca489065" style="color: rgb(17, 85, 204); font-family: arial, sans-serif;" target="_blank"><span style="font-family: Calibri, sans-serif; text-decoration: none;">
+<img alt="CONTEXT Twitter" src="https://s3-eu-west-1.amazonaws.com/imgpub/twitter.png" border="0" style="width: 22px; height: 18px;" /></span></a><span style="font-family: Calibri, sans-serif;">&nbsp;<a href="http://cl.s6.exct.net/?qs=aaaa692625e57ae395dccafb633d7ef3cbe11a3392ca95f04d321168f3c57bb269a784475b1dd19c9f292eb626666337023fc2c2568f26c1"><img alt="CONTEXT YouTube" src="https://s3-eu-west-1.amazonaws.com/imgpub/youtube.png" border="0" style="width: 54px; height: 22px;" /></a></span></div>
+
+			<div style="color: rgb(0, 0, 0); font-family: arial, helvetica, sans-serif; font-size: 14.6667px; text-align: center;"><a href="http://cl.s6.exct.net/?qs=aaaa692625e57ae3966730eef89d5651af22d6cf1e788e24decc74221046e16b96a66da91cb9bd5acb59a304324271928bb55bb991ace3c7" style="font-size: 9pt; color: rgb(227, 226, 47); font-family: arial, sans-serif;" target="_blank"><span style="font-family: Calibri, sans-serif; text-decoration: none;"><img alt="" src="https://s3-eu-west-1.amazonaws.com/imgpub/blog.png" border="0" style="width: 50px; height: 10px;" /></span></a>&nbsp;</div>
+
+			<div>&nbsp;</div>
+			</div></td>
+		</tr>
+	</tbody>
+</table>
+</center></font>
+							  </td>
+							</tr>
+	<tr>
+		<td>
+    		 <table bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" >
+          <!--personnalisation-->
+  					
+							<!--personnalisation-->
+					<tr>
+						<td><br>
+							<img src="http://media.techdata.fr/000WEB/template_push/TD02_04.gif" width="730" height="58" alt=""></td>
+					</tr>
+					<tr>
+						<td><table id="Tableau_" width="730" height="43" border="0" cellpadding="0" cellspacing="0">
+						    <tr>
+						      <td><img src="http://media.techdata.fr/000WEB/template_push/TD02_05_01.gif" width="306" height="43" alt="" border="0"></td>
+						      <td><a href="http://cl.s6.exct.net/?qs=aaaa692625e57ae31e513878987e46060bbdb8ed19eeaf84efa2059497b92e59cababa32e86fdb8d22f093840601312c57a291de3726b55d" target="_blank"><img src="http://media.techdata.fr/000WEB/template_push/TD02_05_02.gif" width="42" height="43" alt="" border="0"></a></td>
+						      <td><a href="http://cl.s6.exct.net/?qs=aaaa692625e57ae33e38b977dd8ebad6f151932ea4a3e41d216c95673007cac7941577fdae048d86f1e0b2372a128eead011e8efeb8151f7" target="_blank"><img src="http://media.techdata.fr/000WEB/template_push/TD02_05_03.gif" width="43" height="43" alt="" border="0"></a></td>
+						      <td><a href="http://cl.s6.exct.net/?qs=aaaa692625e57ae3e735ed0d5eb15c3e75a211beb4e9cabcd3eaf8e38ccf2142a0fac7cb65ecdd0628eb30416f72254756e6105b1ff3f526" target="_blank"><img src="http://media.techdata.fr/000WEB/template_push/TD02_05_04.gif" width="44" height="43" alt="" border="0"></a></td>
+						      <td><a href="http://cl.s6.exct.net/?qs=aaaa692625e57ae3bf49633313c3160f67b64c9868b8efd2e4e67ac3f56c5748f63e0f0457882ee7075fdcb27b081aa2c0049b524dfd28a8" target="_blank"><img src="http://media.techdata.fr/000WEB/template_push/TD02_05_05.gif" width="46" height="43" alt="" border="0"></a></td>
+						      <td><img src="http://media.techdata.fr/000WEB/template_push/TD02_05_06.gif" width="249" height="43" alt="" border="0"></td>
+					        </tr>
+				        </table></td>
+			   </tr>
+					<tr>
+						<td>
+														<table width="730px"  border="0" cellpadding="0" cellspacing="0"> 
+				       	<tr height="25px">
+								<td><a href="http://cl.s6.exct.net/?qs=aaaa692625e57ae34c1ea8790ffb91a6d5d9e44d12e2d44776fd691f6c601728fb02de91b0e1e716546e801b3e42fa9708510789851e02f4" target="_blank"><img src="http://media.techdata.fr/000WEB/template_push/bdp_01.gif" alt="" width="230" height="25" border="0"></a></td>
+						  <td><a href="http://cl.s6.exct.net/?qs=aaaa692625e57ae330790d6275c16a1835f3141d4cdb55b6f8e0c023fa97338d8835c111ad911cdcbc54db044203844958feb2fc022f2172" target="_blank"><img src="http://media.techdata.fr/000WEB/template_push/bdp_02.gif" alt="" width="181" height="25" border="0"></a></td>
+						  <td><a href="http://cl.s6.exct.net/?qs=aaaa692625e57ae36ee8f132d1ff86b5c4fc4052a573fd4165e9f7fb975bd3ad69abc435235e18c950b43b93691e6fdff5afef7e22396251" target="_blank"><img src="http://media.techdata.fr/000WEB/template_push/bdp_03.gif" alt="" width="206" height="25" border="0"></a></td>
+						  <td><a href="http://cl.s6.exct.net/?qs=aaaa692625e57ae3ec801a1fad70c429b02c97b2ca33d690385427ea703cfd7059ee0409c04d3c7bcd3231f239a50ce30e62c14f4a939b35" target="_blank"><img src="http://media.techdata.fr/000WEB/template_push/bdp_04.gif" alt="" width="113" height="25" border="0"></a></td>
+							  </tr>
+						</table>
+
+					</td>
+				</tr>
+				</table>
+
+	</td>
+</tr>
+</table>
+<IMG SRC="http://media.techdata.fr/trackpix.gif" WIDTH="1" HEIGHT="1">
+</div>
+<table width="600" Border="0" align="center" cellpadding="2" cellspacing="0" ID="Table5"><tr><td align="center"><p><font face="verdana" size="1" color="#444444"><b><br>
+  </b>Ce message vous est adress&eacute; parce que vous &ecirc;tes abonn&eacute; &agrave; notre liste de diffusion.<br>
+  Pour vous <b>d&eacute;sabonner </b>de nos listes de diffusion : <a href="mailto:unsubscribe@techdata.fr?subject=unsubscribe promotions&bcc=mailing@techdata.fr"><b>D&eacute;sabonnement</b></a><br />
+Toutes interrogations concernant cette liste de diffusion doivent &ecirc;tre adress&eacute;es &agrave; : <a href="mailto:mailing@techdata.fr">mailing@techdata.fr</a><br>
+<b><br>
+Tech Data France</b><br>
+5, avenue de l'Europe Marne La Vallée, Cedex 3, 77611, France</font><a href="http://cl.s6.exct.net/?qs=aaaa692625e57ae3e38aa93ce10f4ae752cb5d2565e2da5d0f82d6e901d1a3066ec5ad40d3109aadd9b7238c590e73593b59eb4395f248de"  style="font-family:verdana; font-size:10px; color:#444444; font-style:normal; text-decoration:none;">.</a>
+</p></td></tr></table>
+</body>
+</html>
+
+--UDCwVtr677rt=_?:--
+

@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from .common import TestMailGW, open_mail
+from openerp import exceptions
 # from email.utils import formataddr
 # from openerp.tools import mute_logger
 # import socket
@@ -250,9 +251,22 @@ class TestMailgateway(TestMailGW):
             cr, uid, 'res.partner', open_mail('mail_known_partner2.eml'))
         self.assertTrue(res, 'Mail is known Name+mail, direct delivery')
 
-    def test_50_unsubscribe_mailing(self):
-        """ Unsubscribe from mailing """
+    def test_50_unsubscribe_mailing_mail(self):
+        """ Unsubscribe from mailing by email"""
         cr, uid = self.cr, self.uid
         res = self.mail_inqueue.message_queue(
             cr, uid, 'res.partner', open_mail('mailing1.eml'))
         self.assertTrue(res.unsubscribe(), 'Unsubscribe message 1 failed !!')
+
+        with self.assertRaises(exceptions.Warning):
+            res = self.mail_inqueue.message_queue(
+                cr, uid, 'res.partner', open_mail('mailing2.eml'))
+            res.unsubscribe()
+
+    def test_60_unsubscribe_mailing_mail(self):
+        """ Unsubscribe from mailing by http"""
+        cr, uid = self.cr, self.uid
+        with self.assertRaises(exceptions.Warning):
+            res = self.mail_inqueue.message_queue(
+                cr, uid, 'res.partner', open_mail('mailing3.eml'))
+            res.unsubscribe()
