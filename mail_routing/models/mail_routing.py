@@ -97,4 +97,5 @@ class MailIncomingQueue(models.Model):
             'email_date': msg.get('date'),
             'status': mess_type,
         }
-        return self.create(args)
+        mr_id = self.create(args)
+        return mr_id.id
