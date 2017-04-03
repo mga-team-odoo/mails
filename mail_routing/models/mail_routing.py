@@ -4,6 +4,8 @@
 
 from openerp import models, api, fields
 from openerp.addons.mail import mail_thread as mt
+from openerp.exceptions import Warning
+from openerp.tools.translate import _
 import email
 import xmlrpclib
 import re
@@ -12,6 +14,7 @@ EMAIL_STATUS = [
     ('normal', 'Normal'),
     ('spam', 'SPAM'),
     ('mailing', 'Mailing list'),
+    ('unsubscribe', 'Unsubscribe'),
 ]
 
 
@@ -46,6 +49,58 @@ class MailIncomingQueue(models.Model):
         self.ensure_one()
         self.env['mail.thread'].message_process(self.model, self.original)
         self.unlink()
+        return True
+
+    @api.multi
+    def unsubscribe(self):
+        """
+        If mail come from a mailing list, we can unsubscribe in one clic
+        """
+        self.ensure_one()
+        unsub = None
+        msg_txt = email.message_from_string(self.original)
+        msg = self.env['mail.thread'].message_parse(
+            msg_txt, save_original=None)
+        if msg_txt.get('List-Unsubscribe'):
+            unsub = msg_txt.get('List-Unsubscribe').split(',')
+
+        if unsub is None:
+            raise Warning(_('No unsubscribe link found!!!'))
+
+        ims = self.env['ir.mail_server']
+        check_mail = False
+        for el in unsub:
+            el = self.clean_ref(el)
+            if el.startswith('mailto:'):
+                body = """Unsubscribe
+This mail is automatically sent by odoo mail_routing
+https://www.odoo.com/apps/modules/8.0/mail_routing/
+"""
+                mess = ims.build_email(
+                    email_from = msg_txt.get('To'),
+                    email_to=(el[7:],),
+                    subject='Unsubscribe',
+                    body=body,
+                    references=msg_txt.get('Message-ID'),
+                    headers={
+                        'X-Mail-Routing-ID': self.id,
+                        'X-Mail-From': self.email_from,
+                        'X-Mail-Subject': self.email_subject,
+                    }
+                )
+                check_mail = True
+            elif el.startswith('http'):
+                # Not implemented
+                http_link = el
+
+        if not check_mail and el:
+            raise Warning(_('Unsubscribe link %s') % http_link)
+
+        if not mess:
+            raise Warning(_('No unsubscribe link found!'))
+
+        ims.send_email(message=mess)
+        self.status = 'unsubscribe'
         return True
 
     @api.model

@@ -35,8 +35,9 @@
                     <field name="email_to"/>
                     <field name="email_subject"/>
                     <field name="email_date"/>
-                    <field name="email_count_attachments"/>
                     <button string="Accept" icon="gtk-ok" type="object" name="accept_mail"/>
+                    <field name="email_count_attachments"/>
+                    <button string="Unsubscribe" icon="gtk-execute" type="object" name="unsubscribe"/>
                     <field name="status"/>
                     <button string="Cancel" icon="gtk-cancel" type="object" name="delete_mail"/>
                 </tree>
