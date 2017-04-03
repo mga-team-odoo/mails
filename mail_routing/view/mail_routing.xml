@@ -76,6 +76,16 @@
                 <search string="Queues">
                     <field name="message"/>
                     <field name="email_subject"/>
+                    <field name="email_from"/>
+                    <field name="status"/>
+                    <filter name="filter_normal" string="Normal" domain="[('status','=', 'normal')]"/>
+                    <filter name="filter_spam" string="Spam" domain="[('status','=', 'spam')]"/>
+                    <filter name="filter_mailing" string="Mailing" domain="[('status','=', 'mailing')]"/>
+                    <filter name="filter_unsubscribe" string="Unsubscribe" domain="[('status','=', 'unsubscribe')]"/>
+                    <group expand="0" string="Group By">
+                        <filter string="Status" icon="terp-folder-orange" domain="" context="{'group_by':'status'}"/>
+                        <filter string="To" icon="terp-folder-orange" domain="" context="{'group_by':'email_to'}"/>
+                    </group>
                 </search>
             </field>
         </record>

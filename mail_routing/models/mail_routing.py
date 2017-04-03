@@ -14,7 +14,7 @@ EMAIL_STATUS = [
     ('normal', 'Normal'),
     ('spam', 'SPAM'),
     ('mailing', 'Mailing list'),
-    ('unsubscribe', 'Unsubscribe'),
+    ('unsubscribe', 'Unsubscribed'),
 ]
 
 
@@ -143,6 +143,8 @@ https://www.odoo.com/apps/modules/8.0/mail_routing/
         mess_type = 'normal'
         if msg_txt.get('List-Post') or msg_txt.get('List-ID'):
             mess_type = 'mailing'
+        elif msg_txt.get('X-Spam-Flag', '') == 'YES':
+            mess_type = 'spam'
 
         args = {
             'message': message_id,
