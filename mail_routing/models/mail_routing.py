@@ -14,7 +14,7 @@ EMAIL_STATUS = [
     ('normal', 'Normal'),
     ('spam', 'SPAM'),
     ('mailing', 'Mailing list'),
-    ('unsubscribe', 'Unsubscribe'),
+    ('unsubscribe', 'Unsubscribed'),
 ]
 
 
