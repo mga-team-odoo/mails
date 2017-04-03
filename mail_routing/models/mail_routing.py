@@ -103,5 +103,20 @@ class MailIncomingQueue(models.Model):
             'email_date': msg.get('date'),
             'status': mess_type,
         }
-        mr_id = self.create(args)
-        return mr_id.id
+        return self.create(args)
+
+    @api.model
+    def rpc_message_queue(self, model, message, custom_values=None,
+                          save_original=False, strip_attachments=False,
+                          thread_id=None):
+        """
+        In XMLRPC we cannot return a python object
+        """
+        trt = self.message_queue(
+            model, message, custom_values, save_original,
+            strip_attachments,thread_id)
+
+        if not isinstance(trt, bool):
+            return trt.id
+
+        return True

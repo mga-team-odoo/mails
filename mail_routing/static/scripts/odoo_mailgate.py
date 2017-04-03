@@ -122,7 +122,7 @@ class EmailParser(object):
         # parse its headers
         # and hence can't convert it to utf-8 for transport
         return self.rpc('mail.incoming.queue',
-                        'message_queue',
+                        'rpc_message_queue',
                         self.model,
                         xmlrpclib.Binary(message),
                         custom_values or {},
