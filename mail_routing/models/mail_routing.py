@@ -59,8 +59,6 @@ class MailIncomingQueue(models.Model):
         self.ensure_one()
         unsub = None
         msg_txt = email.message_from_string(self.original)
-        msg = self.env['mail.thread'].message_parse(
-            msg_txt, save_original=None)
         if msg_txt.get('List-Unsubscribe'):
             unsub = msg_txt.get('List-Unsubscribe').split(',')
 
@@ -77,7 +75,7 @@ This mail is automatically sent by odoo mail_routing
 https://www.odoo.com/apps/modules/8.0/mail_routing/
 """
                 mess = ims.build_email(
-                    email_from = msg_txt.get('To'),
+                    email_from=msg_txt.get('To'),
                     email_to=(el[7:],),
                     subject='Unsubscribe',
                     body=body,

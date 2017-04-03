@@ -256,4 +256,3 @@ class TestMailgateway(TestMailGW):
         res = self.mail_inqueue.message_queue(
             cr, uid, 'res.partner', open_mail('mailing1.eml'))
         self.assertTrue(res.unsubscribe(), 'Unsubscribe message 1 failed !!')
-
