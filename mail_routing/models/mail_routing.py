@@ -81,12 +81,18 @@ class MailIncomingQueue(models.Model):
                 self.env['mail.thread'].message_process(model, message)
                 return True
 
+        # Search if message already integrate
+        message_id = self.clean_ref(msg_txt.get('Message-ID'))
+        queue_ids = self.search([('message', '=', message_id)])
+        if queue_ids:
+            return True
+
         mess_type = 'normal'
         if msg_txt.get('List-Post') or msg_txt.get('List-ID'):
             mess_type = 'mailing'
 
         args = {
-            'message': self.clean_ref(msg_txt.get('Message-ID')),
+            'message': message_id,
             'model': model,
             'original': message,
             'email_from': msg.get('from'),
