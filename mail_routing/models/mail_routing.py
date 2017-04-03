@@ -114,7 +114,7 @@ class MailIncomingQueue(models.Model):
         """
         trt = self.message_queue(
             model, message, custom_values, save_original,
-            strip_attachments,thread_id)
+            strip_attachments, thread_id)
 
         if not isinstance(trt, bool):
             return trt.id
