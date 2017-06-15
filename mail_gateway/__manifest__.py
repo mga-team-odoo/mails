@@ -9,11 +9,12 @@
     "category": "Social Network",
     "summary": """Additionnal API to manage API
     Better than the existing one that use admin account and hardocde password
-    New API use a Token as Authentication, better to manage multiple database and instance
+    New API use a Token as Authentication, better to manage multiple database
+    and instance
     """,
     "depends": [
         'mail',
-        #'document',
+        # 'document',
     ],
     "data": [],
     "installable": True,
