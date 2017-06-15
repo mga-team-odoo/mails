@@ -18,4 +18,5 @@
         'security/ir.model.access.csv',
         'view/mail_routing.xml',
     ],
+    "installable": False,
 }
